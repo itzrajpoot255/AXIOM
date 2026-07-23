@@ -1,0 +1,17 @@
+# AXIOM — cloud deployment dependencies
+# A trimmed-down version of requirements.txt for headless cloud hosts
+# (Render, Railway, Fly.io, ...). Leaves out pyautogui/voice packages,
+# which need a real display/microphone that a cloud server doesn't have
+# and can fail to even install on a minimal Linux build image.
+#
+# Screen/voice tools simply report "unavailable" at runtime when these
+# packages are missing — nothing else breaks.
+
+httpx
+psutil
+fastapi
+uvicorn
+ddgs              # web_search
+Pillow            # image handling for read_image
+beautifulsoup4    # cleaner fetch_url extraction
+pypdf             # read_pdf (PDF text extraction)

@@ -1,0 +1,25 @@
+# AXIOM — dependencies
+# Core (text mode needs only these two):
+httpx
+psutil
+
+# Web UI (arc.py --server / start.bat):
+fastapi
+uvicorn
+
+# Voice (skip if you only use text):
+faster-whisper
+sounddevice
+numpy
+edge-tts
+pyttsx3
+
+# Tools (each degrades gracefully if missing):
+ddgs              # web_search
+Pillow            # screenshot / describe_screen / read_image
+pyautogui         # type_text / press_keys
+beautifulsoup4    # cleaner fetch_url extraction
+pypdf             # read_pdf (PDF text extraction)
+
+# Quality of life:
+prompt_toolkit    # REPL that redraws cleanly around voice output
